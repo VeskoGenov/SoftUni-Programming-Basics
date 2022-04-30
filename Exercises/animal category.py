@@ -1,8 +1,14 @@
 animal = input()
 
-if animal == "dog":
-    print("mammal")
-elif (animal == "crocodile" or animal == "tortoise" or animal == "snake"):
-    print("reptile")
+animal_info = {
+    "dog": "mammal",
+    "crocodile": "reptile",
+    "tortoise": "reptile",
+    "snake": "reptile",
+    "others": "unknown"
+}
+
+if animal in animal_info:
+    print(animal_info.get(animal))
 else:
-    print("unknown")
+    print(animal_info["others"])

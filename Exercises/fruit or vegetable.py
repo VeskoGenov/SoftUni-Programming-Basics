@@ -1,24 +1,25 @@
 food = input()
 
-if food == "banana":
-    print("fruit")
-elif food == "apple":
-    print("fruit")
-elif food == "kiwi":
-    print("fruit")
-elif food == "cherry":
-    print("fruit")
-elif food == "lemon":
-    print("fruit")
-elif food == "grapes":
-    print("fruit")
-elif food == "tomato":
-    print("vegetable")
-elif food == "cucumber":
-    print("vegetable")
-elif food == "pepper":
-    print("vegetable")
-elif food == "carrot":
-    print("vegetable")
+# •	Плодовете "fruit" имат следните възможни стойности:  banana, apple, kiwi, cherry, lemon и grapes;
+# •	Зеленчуците "vegetable" имат следните възможни стойности:  tomato, cucumber, pepper и carrot;
+# •	Всички останали са "unknown".
+
+
+food_info = {
+    "banana": "fruit",
+    "apple": "fruit",
+    "kiwi": "fruit",
+    "cherry": "fruit",
+    "lemon": "fruit",
+    "grapes": "fruit",
+    "tomato": "vegetable",
+    "cucumber": "vegetable",
+    "pepper": "vegetable",
+    "carrot": "vegetable",
+    1: "unknown"
+}
+
+if food in food_info:
+    print(food_info.get(food))
 else:
-    print("unknown")
+    print(food_info[1])

@@ -1,16 +1,14 @@
 week_day = input()
 
-if week_day == "Monday":
-    print(12)
-elif week_day == "Tuesday":
-    print(12)
-elif week_day == "Wednesday":
-    print(14)
-elif week_day == "Thursday":
-    print(14)
-elif week_day == "Friday":
-    print(12)
-elif week_day == "Saturday":
-    print(16)
-elif week_day == "Sunday":
-    print(16)
+ticket_info = {
+    "Monday": 12,
+    "Tuesday": 12,
+    "Wednesday": 14,
+    "Thursday": 14,
+    "Friday": 12,
+    "Saturday": 16,
+    "Sunday": 16,
+}
+
+if week_day in ticket_info:
+    print(ticket_info.get(week_day))
